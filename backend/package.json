@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "dev": "nodemon src/server.js",
-    // NOVO COMANDO: 
-    // 1. Executa as migrations para o ambiente de produção.
-    // 2. Roda o servidor Node.js.
-    "start-prod": "npx knex migrate:latest --env production && node src/server.js",
-    "start": "npm run start-prod"
-  },
+"scripts": {
+  "dev": "nodemon src/server.js",
+  // ----------------------------------------------------
+  // VERIFIQUE ESTAS DUAS LINHAS:
+  "start-prod": "npx knex migrate:latest --env production && node src/server.js",
+  "start": "npm run start-prod"
+  // OU:
+  // "start": "npx knex migrate:latest --env production && node src/server.js"
+  // ----------------------------------------------------
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
