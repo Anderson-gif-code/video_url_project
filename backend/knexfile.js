@@ -16,5 +16,13 @@ module.exports = {
     },
     // Necessário para o SQLite
     useNullAsDefault: true,
+  production: {
+    client: 'pg', 
+    connection: process.env.DATABASE_URL, // Variável que o Render usará
+    migrations: {
+      directory: './src/database/migrations'
+    },
+    useNullAsDefault: true,
+
   },
 };
