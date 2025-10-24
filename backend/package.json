@@ -9,6 +9,7 @@
     // 1. Executa as migrations para o ambiente de produção.
     // 2. Roda o servidor Node.js.
     "start-prod": "npx knex migrate:latest --env production && node src/server.js",
+    "start": "npm run start-prod"
   },
   "keywords": [],
   "author": "",
