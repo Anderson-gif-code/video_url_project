@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    // NOVO COMANDO: 
+    // 1. Executa as migrations para o ambiente de produção.
+    // 2. Roda o servidor Node.js.
+    "start-prod": "npx knex migrate:latest --env production && node src/server.js",
   },
   "keywords": [],
   "author": "",
